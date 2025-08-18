@@ -184,7 +184,7 @@ const MyDonationRequests = () => {
                         ${request.donationStatus === 'pending' ? 'bg-yellow-200 text-yellow-800' : ''}
                         ${request.donationStatus === 'inprogress' ? 'bg-blue-200 text-blue-800' : ''}
                         ${request.donationStatus === 'done' ? 'bg-green-200 text-green-800' : ''}
-                        ${request.donationStatus === 'canceled' ? 'bg-red-200 text-red-800' : ''}
+                        ${request.donationStatus === 'canceled' ? 'bg-red-500 text-red-800' : ''}
                       `}>
                         {request.donationStatus}
                       </span>
@@ -212,7 +212,7 @@ const MyDonationRequests = () => {
                             </button>
                             <button
                               onClick={() => handleStatusChange(request._id, 'canceled')}
-                              className="btn btn-sm bg-red-500 hover:bg-red-600 text-white rounded-md tooltip"
+                              className="btn btn-sm bg-red-500 hover:bg-red-500 text-white rounded-md tooltip"
                               data-tip="Mark as Canceled"
                             >
                               Cancel
@@ -222,7 +222,7 @@ const MyDonationRequests = () => {
                         {request.donationStatus !== 'inprogress' && request.donationStatus !== 'done' && request.donationStatus !== 'canceled' && (
                           <Link
                             to={`/dashboard/edit-donation-request/${request._id}`} // Assuming this route exists
-                            className="btn btn-sm bg-blue-500 hover:bg-blue-600 text-white rounded-md tooltip"
+                            className="btn btn-sm bg-blue-500 hover:bg-red-500 text-white rounded-md tooltip"
                             data-tip="Edit Request"
                           >
                             <FaEdit />
@@ -230,7 +230,7 @@ const MyDonationRequests = () => {
                         )}
                         <button
                           onClick={() => handleDelete(request._id)}
-                          className="btn btn-sm bg-red-500 hover:bg-red-600 text-white rounded-md tooltip"
+                          className="btn btn-sm bg-red-500 hover:bg-red-500 text-white rounded-md tooltip"
                           data-tip="Delete Request"
                         >
                           <FaTrash />
@@ -262,7 +262,7 @@ const MyDonationRequests = () => {
               pageLinkClassName="px-3 py-2 border border-gray-300 rounded-md hover:bg-blue-500 hover:text-white transition-colors duration-200"
               previousLinkClassName="px-3 py-2 border border-gray-300 rounded-md hover:bg-blue-500 hover:text-white transition-colors duration-200"
               nextLinkClassName="px-3 py-2 border border-gray-300 rounded-md hover:bg-blue-500 hover:text-white transition-colors duration-200"
-              activeLinkClassName="bg-blue-600 text-white"
+              activeLinkClassName="bg-red-500 text-white"
               disabledClassName="opacity-50 cursor-not-allowed"
             />
           </div>

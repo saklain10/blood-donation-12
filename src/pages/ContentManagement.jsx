@@ -140,7 +140,7 @@ const ContentManagement = () => {
         {/* Changed Link to a button to open modal */}
         <button
           onClick={() => setIsAddBlogModalOpen(true)}
-          className="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg flex items-center gap-2 transition duration-200 shadow-lg"
+          className="btn bg-red-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg flex items-center gap-2 transition duration-200 shadow-lg"
         >
           <FaPlus /> Add Blog
         </button>
@@ -199,7 +199,7 @@ const ContentManagement = () => {
                   {(role === 'admin' || role === 'volunteer') && (
                     <Link
                       to={`/dashboard/content-management/edit-blog/${blog._id}`}
-                      className="btn btn-sm p-1 bg-blue-500 hover:bg-blue-600 text-white rounded-md tooltip"
+                      className="btn btn-sm p-1 bg-blue-500 hover:bg-red-500 text-white rounded-md tooltip"
                       data-tip="Edit Blog"
                     >
                       <FaEdit /> Edit
@@ -223,7 +223,7 @@ const ContentManagement = () => {
                   {role === 'admin' && (
                     <button
                       onClick={() => handleDeleteBlog(blog._id)}
-                      className="btn btn-sm p-1 bg-red-500 hover:bg-red-600 text-white rounded-md tooltip"
+                      className="btn btn-sm p-1 bg-red-500 hover:bg-red-500 text-white rounded-md tooltip"
                       data-tip="Delete Blog"
                     >
                       <FaTrash /> Delete

@@ -152,7 +152,7 @@ const UserDashboard = () => {
                           ${request.donationStatus === 'pending' ? 'bg-yellow-200 text-yellow-800' : ''}
                           ${request.donationStatus === 'inprogress' ? 'bg-blue-200 text-blue-800' : ''}
                           ${request.donationStatus === 'done' ? 'bg-green-200 text-green-800' : ''}
-                          ${request.donationStatus === 'canceled' ? 'bg-red-200 text-red-800' : ''}
+                          ${request.donationStatus === 'canceled' ? 'bg-red-500 text-red-800' : ''}
                         `}>
                           {request.donationStatus}
                         </span>
@@ -170,7 +170,7 @@ const UserDashboard = () => {
                               </button>
                               <button
                                 onClick={() => handleStatusChange(request._id, 'canceled')}
-                                className="btn btn-sm bg-red-500 hover:bg-red-600 text-white rounded-md tooltip"
+                                className="btn btn-sm bg-red-500 hover:bg-red-500 text-white rounded-md tooltip"
                                 data-tip="Mark as Canceled"
                               >
                                 Cancel
@@ -180,7 +180,7 @@ const UserDashboard = () => {
                           {request.donationStatus !== 'inprogress' && request.donationStatus !== 'done' && request.donationStatus !== 'canceled' && (
                             <Link
                               to={`/dashboard/edit-donation-request/${request._id}`}
-                              className="btn btn-sm p-1 bg-blue-500 hover:bg-blue-600 text-white rounded-md tooltip"
+                              className="btn btn-sm p-1 bg-blue-500 hover:bg-red-500 text-white rounded-md tooltip"
                               data-tip="Edit Request"
                             >
                               <FaEdit />
@@ -188,7 +188,7 @@ const UserDashboard = () => {
                           )}
                           <button
                             onClick={() => handleDelete(request._id)}
-                            className="btn btn-sm p-1 bg-red-500 hover:bg-red-600 text-white rounded-md tooltip"
+                            className="btn btn-sm p-1 bg-red-500 hover:bg-red-500 text-white rounded-md tooltip"
                             data-tip="Delete Request"
                           >
                             <FaTrash />
@@ -210,7 +210,7 @@ const UserDashboard = () => {
             <div className="text-center">
               <Link
                 to="/dashboard/my-donation-requests"
-                className="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg text-lg transition duration-200 shadow-lg"
+                className="btn bg-red-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg text-lg transition duration-200 shadow-lg"
               >
                 View My All Requests
               </Link>

@@ -11,7 +11,7 @@ const AllPendingDonationRequests = () => {
     queryKey: ['allPendingDonationRequests'],
     queryFn: async () => {
       // This endpoint is public, so use axios directly
-      const res = await axios.get(`http://localhost:5000/all-pending-donation-requests`);
+      const res = await axios.get(`https://ph-11-assignment-12-saklain.vercel.app/all-pending-donation-requests`);
       return res.data;
     },
     staleTime: 1000 * 30, // Data considered fresh for 30 seconds
@@ -37,7 +37,7 @@ const AllPendingDonationRequests = () => {
   }
 
   return (
-    <div className="bg-white p-6 rounded-lg shadow-md max-w-6xl mx-auto my-8">
+    <div className="bg-white p-6 rounded-lg shadow-md max-w-6xl mx-auto mb-8 mt-20">
       <h1 className="text-3xl font-bold mb-6 text-gray-800 text-center">All Pending Blood Donation Requests</h1>
       <p className="text-gray-600 mb-8 text-center">
         Browse through all the urgent blood donation needs. Your help can save a life!
@@ -71,7 +71,7 @@ const AllPendingDonationRequests = () => {
                   <td className="py-3 px-6 text-center">
                     <Link
                       to={`/donation-details/${request._id}`}
-                      className="btn btn-lg hover:bg-blue-300 bg-blue-400 justify-center text-white flex items-center gap-1 rounded-md tooltip"
+                      className="btn btn-lg hover:bg-blue-300 bg-red-500 justify-center text-white flex items-center gap-1 rounded-md tooltip"
                       data-tip="View Details"
                     >
                       <FaEye /> View

@@ -1,11 +1,11 @@
 
 // src/pages/SearchPage.jsx
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react'; // Added useMemo
 import { useForm } from 'react-hook-form';
-import useAxiosPublic from '../hooks/useAxiosPublic'; // Use axiosPublic for public search
+import useAxiosPublic from '../hooks/useAxiosPublic';
 import LoadingSpinner from '../components/LoadingSpinner';
 import Swal from 'sweetalert2';
-import { districtsData, upazilasData } from "../data/bangladeshGeocode"; // Import geo data
+import { districtsData, upazilasData } from "../data/bangladeshGeocode";
 import { FaSearch, FaTint, FaMapMarkerAlt, FaUser, FaEnvelope, FaPhone } from 'react-icons/fa';
 
 const SearchPage = () => {
@@ -18,14 +18,18 @@ const SearchPage = () => {
   const currentDistrict = watch('district');
   const [availableUpazilas, setAvailableUpazilas] = useState([]);
 
+  // Memoize the mutable copies of the data
+  const memoizedDistrictsData = useMemo(() => [...districtsData], [districtsData]);
+  const memoizedUpazilasData = useMemo(() => ({ ...upazilasData }), [upazilasData]);
+
   // Effect to update available upazilas when currentDistrict changes
   useEffect(() => {
     if (currentDistrict) {
-      const districtObj = districtsData.find(d => d.name === currentDistrict);
+      const districtObj = memoizedDistrictsData.find(d => d.name === currentDistrict);
       if (districtObj) {
         const districtId = districtObj.id;
-        if (upazilasData[districtId]) {
-          setAvailableUpazilas(upazilasData[districtId]);
+        if (memoizedUpazilasData[districtId]) {
+          setAvailableUpazilas(memoizedUpazilasData[districtId]);
         } else {
           setAvailableUpazilas([]);
         }
@@ -36,12 +40,12 @@ const SearchPage = () => {
       setAvailableUpazilas([]);
     }
     setValue('upazila', ''); // Reset upazila when district changes
-  }, [currentDistrict, setValue]);
+  }, [currentDistrict, setValue, memoizedDistrictsData, memoizedUpazilasData]); // Use memoized data in dependencies
 
   const onSubmit = async (data) => {
     setIsLoading(true);
     setError(null);
-    setSearchResults([]); // Clear previous results
+    setSearchResults([]);
 
     try {
       const queryParams = new URLSearchParams();
@@ -72,7 +76,7 @@ const SearchPage = () => {
   };
 
   return (
-    <div className="bg-white p-6 rounded-lg shadow-md max-w-4xl mx-auto my-8">
+    <div className="bg-white p-6 rounded-lg shadow-md max-w-4xl mx-auto mb-8 mt-20">
       <h1 className="text-3xl font-bold mb-6 text-gray-800 text-center">Search Donors</h1>
       <p className="text-gray-600 mb-8 text-center">
         Find blood donors near you by filtering by blood group, district, and upazila.
@@ -109,7 +113,7 @@ const SearchPage = () => {
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
               <option value="">Select District</option>
-              {districtsData.map((d) => (
+              {memoizedDistrictsData.map((d) => (
                 <option key={d.id} value={d.name}>{d.name}</option>
               ))}
             </select>
@@ -134,7 +138,7 @@ const SearchPage = () => {
 
         <button
           type="submit"
-          className="btn bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg text-lg transition duration-200 shadow-lg flex items-center justify-center w-full"
+          className="btn bg-red-500 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg text-lg transition duration-200 shadow-lg flex items-center justify-center w-full"
           disabled={isLoading}
         >
           {isLoading ? (
@@ -170,8 +174,6 @@ const SearchPage = () => {
               <p className="text-gray-600 mb-1 flex items-center gap-2"><FaTint className="text-red-500" /> Blood Group: <span className="font-bold text-red-600">{donor.bloodGroup}</span></p>
               <p className="text-gray-600 mb-1 flex items-center gap-2"><FaMapMarkerAlt className="text-gray-500" /> Location: {donor.district}, {donor.upazila}</p>
               <p className="text-gray-600 mb-1 flex items-center gap-2"><FaEnvelope className="text-gray-500" /> Email: {donor.email}</p>
-              {/* Optional: Add phone number if available and required */}
-              {/* <p className="text-gray-600 flex items-center gap-2"><FaPhone className="text-gray-500" /> Phone: {donor.phone || 'N/A'}</p> */}
             </div>
           ))}
         </div>

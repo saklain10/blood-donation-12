@@ -131,7 +131,7 @@ export default function AllUsers() {
                   <td className="py-3 px-6 capitalize">{user.role}</td>
                   <td className="py-3 px-6">
                     <span className={`px-2 py-1 rounded-sm text-xs font-semibold ${
-                      user.status === 'active' ? 'bg-green-200 text-green-800' : 'bg-red-200 text-red-800'
+                      user.status === 'active' ? 'bg-green-200 text-green-800' : 'bg-red-500 text-red-800'
                     }`}>
                       {user.status}
                     </span>

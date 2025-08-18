@@ -18,7 +18,7 @@ const BlogDetailsPage = () => {
   }
 
   return (
-    <div className="container mx-auto p-6 bg-white rounded-lg shadow-lg my-8 max-w-4xl">
+    <div className="container mx-auto p-6 bg-white rounded-lg shadow-lg mb-8 mt-20 max-w-4xl ">
       <img
         src={blog.thumbnailImage || "https://placehold.co/800x450/cccccc/ffffff?text=Blog+Thumbnail"}
         alt={blog.title}

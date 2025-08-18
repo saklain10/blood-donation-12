@@ -20,8 +20,8 @@ const DashboardSidebar = () => {
   }
 
   return (
-    <div className="w-64 bg-gray-800 mt-8 ml-8 rounded-xl text-white h-screen p-4 flex flex-col shadow-lg sticky top-0 overflow-y-auto">
-      <div className="text-2xl font-bold text-center mb-8 text-blue-400">Dashboard</div>
+    <div className="w-64 mt-8 ml-8 rounded-xl bg-base-100 h-screen p-4 flex flex-col shadow-2xl sticky top-0 overflow-y-auto">
+      <div className="text-2xl font-bold text-center mb-8 text-black">Dashboard</div>
 
       <nav className="flex-grow">
         <ul className="space-y-2">
@@ -31,7 +31,7 @@ const DashboardSidebar = () => {
               to="/dashboard/profile"
               className={({ isActive }) =>
                 `flex items-center p-3 rounded-lg transition-colors duration-200 ${
-                  isActive ? 'bg-blue-600 text-white shadow-md' : 'hover:bg-gray-700'
+                  isActive ? 'bg-red-500 text-white shadow-md' : 'hover:bg-base-700'
                 }`
               }
             >
@@ -47,7 +47,7 @@ const DashboardSidebar = () => {
                   to="/dashboard/donor-home"
                   className={({ isActive }) =>
                     `flex items-center p-3 rounded-lg transition-colors duration-200 ${
-                      isActive ? 'bg-blue-600 text-white shadow-md' : 'hover:bg-gray-700'
+                      isActive ? 'bg-red-500 text-white shadow-md' : 'hover:bg-red-200'
                     }`
                   }
                 >
@@ -59,7 +59,7 @@ const DashboardSidebar = () => {
                   to="/dashboard/create-donation-request"
                   className={({ isActive }) =>
                     `flex items-center p-3 rounded-lg transition-colors duration-200 ${
-                      isActive ? 'bg-blue-600 text-white shadow-md' : 'hover:bg-gray-700'
+                      isActive ? 'bg-red-500 text-white shadow-md' : 'hover:bg-red-200'
                     }`
                   }
                 >
@@ -71,7 +71,7 @@ const DashboardSidebar = () => {
                   to="/dashboard/my-donation-requests"
                   className={({ isActive }) =>
                     `flex items-center p-3 rounded-lg transition-colors duration-200 ${
-                      isActive ? 'bg-blue-600 text-white shadow-md' : 'hover:bg-gray-700'
+                      isActive ? 'bg-red-500 text-white shadow-md' : 'hover:bg-red-200'
                     }`
                   }
                 >
@@ -90,7 +90,7 @@ const DashboardSidebar = () => {
                   to="/dashboard/moderator-home"
                   className={({ isActive }) =>
                     `flex items-center p-3 rounded-lg transition-colors duration-200 ${
-                      isActive ? 'bg-blue-600 text-white shadow-md' : 'hover:bg-gray-700'
+                      isActive ? 'bg-red-500 text-white shadow-md' : 'hover:bg-red-200'
                     }`
                   }
                 >
@@ -102,7 +102,7 @@ const DashboardSidebar = () => {
                   to="/dashboard/all-blood-donation-requests"
                   className={({ isActive }) =>
                     `flex items-center p-3 rounded-lg transition-colors duration-200 ${
-                      isActive ? 'bg-blue-600 text-white shadow-md' : 'hover:bg-gray-700'
+                      isActive ? 'bg-red-500 text-white shadow-md' : 'hover:bg-red-200'
                     }`
                   }
                 >
@@ -114,7 +114,7 @@ const DashboardSidebar = () => {
                   to="/dashboard/content-management"
                   className={({ isActive }) =>
                     `flex items-center p-3 rounded-lg transition-colors duration-200 ${
-                      isActive ? 'bg-blue-600 text-white shadow-md' : 'hover:bg-gray-700'
+                      isActive ? 'bg-red-500 text-white shadow-md' : 'hover:bg-red-200'
                     }`
                   }
                 >
@@ -133,7 +133,7 @@ const DashboardSidebar = () => {
                   to="/dashboard/admin-home"
                   className={({ isActive }) =>
                     `flex items-center p-3 rounded-lg transition-colors duration-200 ${
-                      isActive ? 'bg-blue-600 text-white shadow-md' : 'hover:bg-gray-700'
+                      isActive ? 'bg-red-500 text-white shadow-md' : 'hover:bg-red-200'
                     }`
                   }
                 >
@@ -145,7 +145,7 @@ const DashboardSidebar = () => {
                   to="/dashboard/create-donation-request"
                   className={({ isActive }) =>
                     `flex items-center p-3 rounded-lg transition-colors duration-200 ${
-                      isActive ? 'bg-blue-600 text-white shadow-md' : 'hover:bg-gray-700'
+                      isActive ? 'bg-red-500 text-white shadow-md' : 'hover:bg-red-200'
                     }`
                   }
                 >
@@ -157,7 +157,7 @@ const DashboardSidebar = () => {
                   to="/dashboard/all-users"
                   className={({ isActive }) =>
                     `flex items-center p-3 rounded-lg transition-colors duration-200 ${
-                      isActive ? 'bg-blue-600 text-white shadow-md' : 'hover:bg-gray-700'
+                      isActive ? 'bg-red-500 text-white shadow-md' : 'hover:bg-red-200'
                     }`
                   }
                 >
@@ -169,7 +169,7 @@ const DashboardSidebar = () => {
                   to="/dashboard/all-blood-donation-requests"
                   className={({ isActive }) =>
                     `flex items-center p-3 rounded-lg transition-colors duration-200 ${
-                      isActive ? 'bg-blue-600 text-white shadow-md' : 'hover:bg-gray-700'
+                      isActive ? 'bg-red-500 text-white shadow-md' : 'hover:bg-red-200'
                     }`
                   }
                 >
@@ -181,7 +181,7 @@ const DashboardSidebar = () => {
                   to="/dashboard/content-management"
                   className={({ isActive }) =>
                     `flex items-center p-3 rounded-lg transition-colors duration-200 ${
-                      isActive ? 'bg-blue-600 text-white shadow-md' : 'hover:bg-gray-700'
+                      isActive ? 'bg-red-500 text-white shadow-md' : 'hover:bg-red-200'
                     }`
                   }
                 >
@@ -193,7 +193,7 @@ const DashboardSidebar = () => {
                   to="/dashboard/all-fundings"
                   className={({ isActive }) =>
                     `flex items-center p-3 rounded-lg transition-colors duration-200 ${
-                      isActive ? 'bg-blue-600 text-white shadow-md' : 'hover:bg-gray-700'
+                      isActive ? 'bg-red-500 text-white shadow-md' : 'hover:bg-red-200'
                     }`
                   }
                 >
@@ -205,7 +205,7 @@ const DashboardSidebar = () => {
                   to="/dashboard/statistics"
                   className={({ isActive }) =>
                     `flex items-center p-3 rounded-lg transition-colors duration-200 ${
-                      isActive ? 'bg-blue-600 text-white shadow-md' : 'hover:bg-gray-700'
+                      isActive ? 'bg-red-500 text-white shadow-md' : 'hover:bg-red-200'
                     }`
                   }
                 >
@@ -225,7 +225,7 @@ const DashboardSidebar = () => {
               to="/"
               className={({ isActive }) =>
                 `flex items-center p-3 rounded-lg transition-colors duration-200 ${
-                  isActive ? 'bg-blue-600 text-white shadow-md' : 'hover:bg-gray-700'
+                  isActive ? 'bg-red-500 text-white shadow-md' : 'hover:bg-red-200'
                 }`
               }
             >
@@ -235,7 +235,7 @@ const DashboardSidebar = () => {
           <li>
             <button
               onClick={logOut}
-              className="flex items-center p-3 rounded-lg w-full text-left transition-colors duration-200 hover:bg-red-600 text-red-300 hover:text-white"
+              className="flex items-center p-3 rounded-lg w-full text-left transition-colors duration-200 hover:bg-red-500 text-red-300 hover:text-white"
             >
               <FaSignOutAlt className="mr-3" /> Logout
             </button>

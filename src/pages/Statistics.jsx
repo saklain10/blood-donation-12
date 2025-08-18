@@ -93,15 +93,7 @@ const Statistics = () => {
         </div>
       </div>
 
-      {/* Additional charts or detailed statistics can be added here */}
-      <div className="mt-10 p-5 bg-gray-50 rounded-lg shadow-inner">
-        <h2 className="text-2xl font-semibold text-gray-700 mb-4 flex items-center gap-2">
-          <FaChartLine /> Donation Trends (Coming Soon)
-        </h2>
-        <p className="text-gray-500">
-          This section will feature charts showing daily, weekly, or monthly donation request trends.
-        </p>
-      </div>
+      
     </div>
   );
 };

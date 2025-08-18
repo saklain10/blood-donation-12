@@ -1,2 +1,14 @@
-@import "tailwindcss";
-/* @plugin "daisyui"; */
+/* src/index.css */
+
+/* Tailwind CSS directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* DaisyUI plugin import (if you are using DaisyUI) */
+/* If you are using DaisyUI as a PostCSS plugin via tailwind.config.js,
+   you usually don't need a direct @import here for DaisyUI's CSS.
+   However, if you uncommented "@plugin "daisyui";" previously,
+   it was incorrect syntax. You might need to adjust tailwind.config.js instead.
+   Let's keep it simple and rely on tailwind.config.js for DaisyUI.
+*/

@@ -84,7 +84,7 @@ const mainRoutes = createBrowserRouter([
         path: "/donation-details/:id",
         element: <PrivateRoute><DonationRequestDetailsPage /></PrivateRoute>,
         loader: async ({ params }) => {
-          const { data } = await axios.get(`http://localhost:5000/donation-details/${params.id}`);
+          const { data } = await axios.get(`https://ph-11-assignment-12-saklain.vercel.app/donation-details/${params.id}`);
           return data;
         },
       },
@@ -96,7 +96,7 @@ const mainRoutes = createBrowserRouter([
         path: "/blog-details/:id",
         element: <BlogDetailsPage />,
         loader: async ({ params }) => {
-          const res = await axios.get(`http://localhost:5000/blog-details/${params.id}`);
+          const res = await axios.get(`https://ph-11-assignment-12-saklain.vercel.app/blog-details/${params.id}`);
           return res.data;
         },
       },
@@ -145,7 +145,7 @@ const mainRoutes = createBrowserRouter([
             path: "edit-donation-request/:id",
             element: <EditDonationRequestPage />,
             loader: async ({ params }) => {
-              const { data } = await axios.get(`http://localhost:5000/donation-details/${params.id}`);
+              const { data } = await axios.get(`https://ph-11-assignment-12-saklain.vercel.app/donation-details/${params.id}`);
               return data;
             },
           },
@@ -170,7 +170,7 @@ const mainRoutes = createBrowserRouter([
             path: "content-management/edit-blog/:id", // Route for editing a blog
             element: <EditBlogPage />,
             loader: async ({ params }) => {
-              const res = await axios.get(`http://localhost:5000/blog-details/${params.id}`); // Fetch blog details
+              const res = await axios.get(`https://ph-11-assignment-12-saklain.vercel.app/blog-details/${params.id}`); // Fetch blog details
               return res.data;
             },
           },

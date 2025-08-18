@@ -5,7 +5,7 @@ import DashboardSidebar from "../components/DashboardSidebar"; // Import the Das
 
 const DashboardLayout = () => {
   return (
-    <div className="flex flex-col lg:flex-row min-h-screen bg-gray-100">
+    <div className="flex flex-col lg:flex-row min-h-screen bg-gray-100 mt-20">
       {/* Sidebar for Dashboard */}
       <div className="">
         <DashboardSidebar />

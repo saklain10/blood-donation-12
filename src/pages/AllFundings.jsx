@@ -111,7 +111,7 @@ const AllFundings = () => {
               pageLinkClassName="px-3 py-2 border border-gray-300 rounded-md hover:bg-blue-500 hover:text-white transition-colors duration-200"
               previousLinkClassName="px-3 py-2 border border-gray-300 rounded-md hover:bg-blue-500 hover:text-white transition-colors duration-200"
               nextLinkClassName="px-3 py-2 border border-gray-300 rounded-md hover:bg-blue-500 hover:text-white transition-colors duration-200"
-              activeLinkClassName="bg-blue-600 text-white"
+              activeLinkClassName="bg-red-500 text-white"
               disabledClassName="opacity-50 cursor-not-allowed"
             />
           </div>

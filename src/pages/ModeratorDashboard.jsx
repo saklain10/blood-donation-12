@@ -162,7 +162,7 @@ const ModeratorDashboard = () => {
             <div className="text-center">
               <Link
                 to="/dashboard/all-blood-donation-requests"
-                className="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg text-lg transition duration-200 shadow-lg"
+                className="btn bg-red-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg text-lg transition duration-200 shadow-lg"
               >
                 View All Blood Requests
               </Link>

@@ -43,8 +43,8 @@ const BlogPage = () => {
   }
 
   return (
-    <div className="container mx-auto p-6 bg-gray-50 min-h-screen">
-      <h1 className="text-4xl font-bold text-center text-gray-800 mb-10">Our Blog Posts</h1>
+    <div className="container mx-auto p-6 bg-gray-50 min-h-screen mb-6 mt-20">
+      <h1 className="text-4xl font-bold text-center text-gray-800 mb-10">Blog Posts</h1>
 
       {blogs.length === 0 ? (
         <div className="text-center py-20 text-gray-500">
@@ -69,7 +69,7 @@ const BlogPage = () => {
                 <p className="text-gray-700 mb-5 line-clamp-3" dangerouslySetInnerHTML={{ __html: blog.content.replace(/<[^>]*>?/gm, '') }}></p>
                 <Link
                   to={`/blog-details/${blog._id}`}
-                  className="inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg transition duration-200"
+                  className="inline-block bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg transition duration-200"
                 >
                   Read More
                 </Link>

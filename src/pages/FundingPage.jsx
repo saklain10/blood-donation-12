@@ -48,7 +48,7 @@ const FundingPage = () => {
   }, []);
 
   return (
-    <div className="bg-white p-6 rounded-lg shadow-md max-w-2xl mx-auto my-8">
+    <div className="bg-white p-6 rounded-lg shadow-md max-w-2xl mx-auto mb-8 mt-20">
       <h1 className="text-3xl font-bold mb-6 text-gray-800 text-center">Support Our Cause!</h1>
       <p className="text-gray-600 mb-8 text-center">
         Your generous contribution helps us save lives. Please enter the amount you wish to donate.

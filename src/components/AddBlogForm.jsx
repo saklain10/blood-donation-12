@@ -123,7 +123,7 @@ const AddBlogForm = ({ onBlogAdded }) => {
         {/* Create Button */}
         <button
           type="submit"
-          className="btn bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg text-lg transition duration-200 shadow-lg flex items-center justify-center w-full"
+          className="btn bg-red-500 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg text-lg transition duration-200 shadow-lg flex items-center justify-center w-full"
           disabled={isSubmitting}
         >
           {isSubmitting ? (

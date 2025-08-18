@@ -77,7 +77,7 @@ const DonationRequestDetailsPage = () => {
   };
 
   return (
-    <div className="bg-white p-6 rounded-lg shadow-md max-w-4xl mx-auto my-8">
+    <div className="bg-white p-6 rounded-lg shadow-md max-w-4xl mx-auto mb-8 mt-20">
       <h1 className="text-3xl font-bold mb-6 text-gray-800 text-center">Donation Request Details</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
@@ -112,7 +112,7 @@ const DonationRequestDetailsPage = () => {
         <div className="mt-4">
           <p className="text-gray-700"><span className="font-medium">Status:</span>
             <span className={`ml-2 px-3 py-1 rounded-full text-sm font-semibold
-              ${donationStatus === 'pending' ? 'bg-yellow-200 text-yellow-800' : ''}
+              ${donationStatus === 'pending' ? 'bg-red-200 text-yellow-800' : ''}
               ${donationStatus === 'inprogress' ? 'bg-blue-200 text-blue-800' : ''}
               ${donationStatus === 'done' ? 'bg-green-200 text-green-800' : ''}
               ${donationStatus === 'canceled' ? 'bg-red-200 text-red-800' : ''}
