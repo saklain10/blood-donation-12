@@ -8,7 +8,7 @@ The **Blood Donation App** is a comprehensive, user-friendly platform designed t
 
 * **Client Live Link:** [https://ph11-assignment-12-saklain.web.app](https://ph11-assignment-12-saklain.web.app)
 * **Server Live Link:** [https://ph-11-assignment-12-saklain.vercel.app](https://ph-11-assignment-12-saklain.vercel.app)
-* **Server Live Link:** [https://github.com/saklain10/blood-donation-12-server](https://github.com/saklain10/blood-donation-12-server)
+* **Server Repo Link:** [https://github.com/saklain10/blood-donation-12-server](https://github.com/saklain10/blood-donation-12-server)
 
 ## Key Features
 
@@ -142,4 +142,5 @@ To run this client-side project locally, follow these steps:
     npm run dev
     ```
     The client application will typically be accessible at `http://localhost:5173`. Ensure your backend server is also running or deployed for full functionality..................
+
 
